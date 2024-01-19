@@ -1,0 +1,29 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Tabs</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <div class="row">
+      <div class="col-lg-12">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>{{ establishmentData.establishment.name }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+              <mat-tab *ngFor="let category of establishmentData?.categories" [label]="category.category.name">
+                <div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
+                  <h3>{{ category.category.name }}</h3>
+                  <div *ngFor="let menuItem of category.menuItems">
+                    {{ menuItem.name }} - {{ menuItem.description }}
+                    <!-- Add more properties as needed -->
+                  </div>
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
