@@ -1,0 +1,20 @@
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px; /* Adjust spacing between menu items */
+}
+
+.menu-item-details {
+  flex: 1;
+  /* Adjust styling for menu item details */
+}
+
+.menu-item-price {
+  /* Adjust styling for menu item price */
+}
+
+.divider {
+  border-top: 1px solid #ccc; /* Adjust the color of the divider */
+  margin: 8px 0; /* Adjust spacing above and below the divider */
+  width: 100%;
+}

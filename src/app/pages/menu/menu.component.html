@@ -15,7 +15,7 @@
                 <div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
                   <h3>{{ category.category.name }}</h3>
                   <div *ngFor="let menuItem of category.menuItems">
-                    {{ menuItem.name }} - {{ menuItem.description }}
+                    {{ menuItem.name }} - {{ menuItem.description }} - {{menuItem.price}}
                     <!-- Add more properties as needed -->
                   </div>
                 </div>
