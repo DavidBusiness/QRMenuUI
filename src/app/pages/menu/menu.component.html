@@ -13,10 +13,18 @@
             <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
               <mat-tab *ngFor="let category of establishmentData?.categories" [label]="category.category.name">
                 <div class="bg-light-primary mat-body-1 p-16 rounded m-t-12">
-                  <h3>{{ category.category.name }}</h3>
-                  <div *ngFor="let menuItem of category.menuItems">
-                    {{ menuItem.name }} - {{ menuItem.description }} - {{menuItem.price}}
-                    <!-- Add more properties as needed -->
+                  <div class="category-header">
+                    <h3>{{ category.category.name }}</h3>
+                    <h3 class="price-header">Price</h3>
+                  </div>
+                  <div *ngFor="let menuItem of category.menuItems" class="menu-item">
+                    <div class="menu-item-details">
+                      <div class="menu-item-content">
+                        <div class="menu-item-name">{{ menuItem.name }}</div>
+                        <div class="menu-item-description">{{ menuItem.description }}</div>
+                      </div>
+                    </div>
+                    <div class="menu-item-price">R{{ menuItem.price }}</div>
                   </div>
                 </div>
               </mat-tab>
