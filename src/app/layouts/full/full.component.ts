@@ -13,7 +13,6 @@ import { MaterialModule } from 'src/app/material.module';
 import { CommonModule } from '@angular/common';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { TablerIconsModule } from 'angular-tabler-icons';
-import { AppBreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { CustomizerComponent } from './shared/customizer/customizer.component';
 
 const MOBILE_VIEW = 'screen and (max-width: 768px)';
@@ -46,7 +45,6 @@ interface quicklinks {
     CommonModule,
     NgScrollbarModule,
     TablerIconsModule,
-    AppBreadcrumbComponent,
     CustomizerComponent
   ],
   templateUrl: './full.component.html',
