@@ -50,6 +50,7 @@ export interface MenuItem {
   category?: Category; // Assuming you have a Category interface
   categoryOptions?: CategoryOptions[];
   recurrenceDays?: MenuItemRecurrenceDay[];
+  itemIndicator?: number;
 }
 
 export interface MenuItemRecurrenceDay {

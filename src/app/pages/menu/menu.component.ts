@@ -36,6 +36,48 @@ export class MenuComponent implements OnInit {
     this.links.push(`Link ${this.links.length + 1}`);
   }
 
+  getItemIndicatorLabel(indicator: number): string {
+    switch (indicator) {
+      case 1:
+        return 'New';
+      case 2:
+        return 'Spicy';
+      case 3:
+        return 'Vegan';
+      case 4:
+        return 'Vegetarian';
+      case 5:
+        return 'Popular';
+      case 6:
+        return 'Gluten-Free';
+      default:
+        return '';
+    }
+  }
+
+  getIndicatorClass(indicator: number | undefined): string {
+    if (indicator === undefined) {
+      return ''; // or any default class you want to apply for undefined indicators
+    }
+  
+    switch (indicator) {
+      case 1:
+        return 'new';
+      case 2:
+        return 'spicy';
+      case 3:
+        return 'vegan';
+      case 4:
+        return 'vegetarian';
+      case 5:
+        return 'popular';
+      case 6:
+        return 'gluten-free';
+      default:
+        return '';
+    }
+  }
+  
  ngOnInit() {
     debugger
     const establishmentId = 2; // Replace with your actual establishment ID

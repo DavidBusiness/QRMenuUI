@@ -28,10 +28,6 @@
   color: #555; /* Optionally change the color of the description */
 }
 
-.menu-item-price {
-  /* Adjust styling for menu item price */
-}
-
 .divider {
   border-top: 1px solid #ccc; /* Adjust the color of the divider */
   margin: 8px 0; /* Adjust spacing above and below the divider */
@@ -69,4 +65,42 @@
 
 .menu-item-price {
   margin-left: 10px; /* Adjust as needed for spacing */
+}
+
+.item-indicator {
+  font-size: 12px;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: inline-block;
+
+  &.new {
+    background-color: #4caf50; // Green
+    color: #fff;
+  }
+
+  &.spicy {
+    background-color: #ff5722; // Orange
+    color: #fff;
+  }
+
+  &.vegan {
+    background-color: #2196f3; // Blue
+    color: #fff;
+  }
+
+  &.vegetarian {
+    background-color: #ff9800; // Amber
+    color: #fff;
+  }
+
+  &.popular {
+    background-color: #f44336; // Red
+    color: #fff;
+  }
+
+  &.gluten-free {
+    background-color: #9c27b0; // Purple
+    color: #fff;
+  }
 }

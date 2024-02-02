@@ -17,7 +17,12 @@
                   <div *ngFor="let menuItem of category.menuItems" class="menu-item">
                     <div class="menu-item-details">
                       <div class="menu-item-content">
-                        <div class="menu-item-name">{{ menuItem.name }}</div>
+                        <div class="menu-item-name">
+                          {{ menuItem.name }}
+                          <div class="item-indicator" [ngClass]="getIndicatorClass(menuItem.itemIndicator)">
+                            {{ menuItem.itemIndicator ? getItemIndicatorLabel(menuItem.itemIndicator) : '' }}
+                          </div>
+                        </div>
                         <div class="menu-item-description">{{ menuItem.description }}</div>
                       </div>
                     </div>
