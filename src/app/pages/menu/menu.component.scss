@@ -69,38 +69,39 @@
 
 .item-indicator {
   font-size: 12px;
-  padding: 5px;
-  margin-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
   border-radius: 5px;
   display: inline-block;
 
   &.new {
-    background-color: #4caf50; // Green
+    background-color: #4caf50;
     color: #fff;
   }
 
   &.spicy {
-    background-color: #ff5722; // Orange
+    background-color: #ff5722;
     color: #fff;
   }
 
   &.vegan {
-    background-color: #2196f3; // Blue
+    background-color: #2196f3;
     color: #fff;
   }
 
   &.vegetarian {
-    background-color: #ff9800; // Amber
+    background-color: #ff9800;
     color: #fff;
   }
 
   &.popular {
-    background-color: #f44336; // Red
+    background-color: #f44336;
     color: #fff;
   }
 
   &.gluten-free {
-    background-color: #9c27b0; // Purple
+    background-color: #9c27b0;
     color: #fff;
   }
 }

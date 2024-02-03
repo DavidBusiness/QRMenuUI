@@ -6,6 +6,9 @@
           <mat-card-header style="display: flex; justify-content: center; align-items: center;">
             <mat-card-title>{{ establishmentData.establishment.name }}</mat-card-title>
           </mat-card-header>
+          <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+            <img src="assets/images/backgrounds/Tigers_Milk_Logo.jpg" alt="Tigers Milk Logo" width="100" height="75">
+          </div>
           <mat-card-content class="b-t-1">
             <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
               <mat-tab *ngFor="let category of establishmentData?.categories" [label]="category.category.name">
