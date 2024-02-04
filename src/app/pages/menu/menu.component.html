@@ -4,17 +4,17 @@
       <div class="col-lg-12">
         <mat-card class="b-1 shadow-none" style="background-color: #fdf9ed;">
           <mat-card-header style="display: flex; justify-content: center; align-items: center;">
-            <mat-card-title>{{ establishmentData.establishment.name }}</mat-card-title>
+            <mat-card-title>{{ establishmentData.establishmentName }}</mat-card-title>
           </mat-card-header>
           <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
             <img src="assets/images/backgrounds/Tigers_Milk_Logo.jpg" alt="Tigers Milk Logo" width="100" height="75">
           </div>
           <mat-card-content class="b-t-1">
             <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
-              <mat-tab *ngFor="let category of establishmentData?.categories" [label]="category.category.name">
+              <mat-tab *ngFor="let category of establishmentData?.categories" [label]="category.name">
                 <div style="background-color: #fdf9ed;">
                   <div class="category-header">
-                    <h3>{{ category.category.name }}</h3>
+                    <h3>{{ category.name }}</h3>
                     <h3 class="price-header">Price</h3>
                   </div>
                   <div *ngFor="let menuItem of category.menuItems" class="menu-item">
@@ -30,6 +30,22 @@
                       </div>
                     </div>
                     <div class="menu-item-price">R{{ menuItem.price }}</div>
+                  </div>
+
+                  <div>
+                    Extra
+                  </div> 
+
+                  <div *ngFor="let categoryOption of category.categoryOptions" class="menu-item">
+                    <div class="menu-item-details">
+                      <div class="menu-item-content">
+                        <div class="menu-item-name">
+                          {{ categoryOption.name }}
+                        </div>
+                        <div class="menu-item-description">{{ categoryOption.description }}</div>
+                      </div>
+                    </div>
+                    <div class="menu-item-price">R{{ categoryOption.price }}</div>
                   </div>
                 </div>
               </mat-tab>
