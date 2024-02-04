@@ -1,36 +1,38 @@
 .menu-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px; /* Adjust spacing between menu items */
-  border-bottom: 1px solid #ccc; /* Add a border between menu items */
-  padding-bottom: 8px; /* Optional: Add some padding below the line for spacing */
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
 }
 
 .menu-item-details {
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .menu-item-number {
-  margin-right: 8px; /* Adjust spacing between index and content */
+  margin-right: 8px;
 }
 
 .menu-item-content {
   flex: 1;
-  /* Adjust styling for menu item details */
 }
 
 .menu-item-name {
-  font-weight: bold; /* Optionally make the name bold */
+  font-weight: bold; 
+  padding-bottom: 5px;
 }
 
 .menu-item-description {
-  color: #555; /* Optionally change the color of the description */
+  color: #555;
 }
 
 .divider {
-  border-top: 1px solid #ccc; /* Adjust the color of the divider */
-  margin: 8px 0; /* Adjust spacing above and below the divider */
+  border-top: 1px solid #ccc; 
+  margin: 8px 0;
   width: 100%;
 }
 
@@ -41,7 +43,7 @@
 }
 
 .price-header {
-  margin-left: 10px; /* Adjust as needed for spacing */
+  margin-left: 10px;
 }
 
 .menu-item {
@@ -52,19 +54,19 @@
 }
 
 .menu-item-details {
-  flex: 1; /* Takes up remaining space */
+  flex: 1;
 }
 
 .menu-item-name {
-  font-weight: bold; /* Optionally make the name bold */
+  font-weight: bold;
 }
 
 .menu-item-description {
-  color: #555; /* Optionally change the color of the description */
+  color: #555;
 }
 
 .menu-item-price {
-  margin-left: 10px; /* Adjust as needed for spacing */
+  margin-left: 10px;
 }
 
 .item-indicator {
