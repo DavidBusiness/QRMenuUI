@@ -32,20 +32,22 @@
                     <div class="menu-item-price">R{{ menuItem.price }}</div>
                   </div>
 
-                  <div class="category-header">
-                    <h3>Extras</h3>
-                  </div>
-
-                  <div *ngFor="let categoryOption of category.categoryOptions" class="menu-item">
-                    <div class="menu-item-details">
-                      <div class="menu-item-content">
-                        <div class="menu-item-name">
-                          {{ categoryOption.name }}
-                        </div>
-                        <div class="menu-item-description">{{ categoryOption.description }}</div>
+                    <div *ngIf="category.categoryOptions && category.categoryOptions.length > 0">
+                      <div class="category-header">
+                        <h3>Extras</h3>
                       </div>
-                    </div>
-                    <div class="menu-item-price">R{{ categoryOption.price }}</div>
+
+                      <div *ngFor="let categoryOption of category.categoryOptions" class="menu-item">
+                        <div class="menu-item-details">
+                          <div class="menu-item-content">
+                            <div class="menu-item-name">
+                              {{ categoryOption.name }}
+                            </div>
+                            <div class="menu-item-description">{{ categoryOption.description }}</div>
+                          </div>
+                        </div>
+                        <div class="menu-item-price">R{{ categoryOption.price }}</div>
+                      </div>
                   </div>
                 </div>
               </mat-tab>
