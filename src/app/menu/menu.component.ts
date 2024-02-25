@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
-import { EstablishmentDataModel } from '../../models/EstablishmentDataModel';
-import { QRMenuCodeService } from '../../services/qrmenu-code.service';
+import { EstablishmentDataModel } from '../models/EstablishmentDataModel';
+import { QRMenuCodeService } from '../services/qrmenu-code.service';
 
 @Component({
   selector: 'app-menu',

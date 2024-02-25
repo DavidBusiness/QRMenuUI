@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
+import { MenuComponent } from './menu/menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './material.module';
 
 const routes: Routes = [
   {
@@ -10,13 +14,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/pages/menu',
+        redirectTo: '/menu',
         pathMatch: 'full',
       },
       {
-        path: 'pages',
-        loadChildren: () =>
-          import('./pages/pages.module').then((m) => m.PagesModule),
+        path: 'menu',
+        component: MenuComponent,
+        data: {
+          title: 'Menu',
+        },
       },
     ],
   },
@@ -27,7 +33,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [CommonModule,
+            MaterialModule,
+            FormsModule,
+            RouterModule.forRoot(routes)],
+  declarations: [MenuComponent],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
